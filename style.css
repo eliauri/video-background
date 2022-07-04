@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald';
+}
+
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #FFf;
+    z-index: 1;
+    transition: 1s;
+}
+.showcase.active{
+    right:280px;
+    
+}
+.menu{
+   position:absolute;
+   right: 0;
+   width: 300px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.menu ul{
+    list-style: none;
+}
+.menu a{
+    text-decoration: none;
+    font-size: 1.8em;
+    color: #111;
+}
+.menu a:hover{
+    color: #03a9f4
+}
+
+header{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.text{
+    position: relative;
+    z-index: 10;
+}
+.text h2{
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text h3{
+    font-size: 4em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text p{
+    font-size: 1.1em;
+    margin: 20px 0;
+    max-width: 700px;
+    letter-spacing: 1px;
+}
+
+.text a{
+    display: inline-block;
+    font-size: 1em;
+    background: #FFf;
+    padding: 10px 30px;
+    text-decoration: none;
+    color:#111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+}
+.text a:hover{
+    letter-spacing: 6px;
+}
+.social{
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.social li{
+    list-style: none;
+    margin-right: 20px;
+}
+.social img{
+ width: 40px;
+ height: 40px;
+ filter: invert(1);
+ transition: all 0.3s;
+}
+
+.social a:hover img{
+   transform: scale(1.1);
+}
+
+
+
+.toggle{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.toggle span{
+    content:'';
+    position: absolute;
+    top: 20%;
+    background-color: #FFf;
+    width: 40px;
+    height: 2px;
+    transition: all 0.3s;
+}
+.toggle::before,
+.toggle::after{
+    content: '';
+    position: absolute;
+    background-color: #FFF;
+    width: 40px;
+    height: 2px;
+    transition: all 0.3s;
+}
+.toggle::before{
+    top: 43%;
+}
+.toggle::after{
+    top: 65%;
+}
+.toggle.active span{
+    transform: scale(0);
+}
+.toggle.active::before{
+    transform: rotate(45deg);
+    top: 64%;
+}
+.toggle.active::after{
+    transform: rotate(-45deg);
+}
+
+@media(max-width: 991px){
+    .showcase, header{
+        padding: 40px;
+    }
+    .text h2{
+        font-size: 3em;
+    }
+    .text h3{
+        font-size: 2em;
+    }
+}

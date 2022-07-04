@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel Nature</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <div class="logo">travelata</div>
+            <div class="toggle"><span></span></div>
+        </header>
+        <video src="media/The Breathtaking Beauty of Nature.mp4" muted loop autoplay></video>
+        
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Отправься c нами</h2>
+            <h3>в путешествие</h3>
+            <p>Уезжая из привычной обстановки даже на короткий срок,
+                превратите свою жизнь в путешествие, полное неопределенности,
+                и сможете познать себя с самых неожиданных сторон.</p>
+            <a href="#">больше</a>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="media/icons/instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="media/icons/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="media/icons/vk.png" alt=""></a></li>
+        </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Путешествия</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    const toggle = document.getElementsByClassName('toggle')[0];
+    const showcase = document.getElementsByClassName('showcase')[0];
+
+    toggle.addEventListener('click',()=>
+    {   
+        showcase.classList.toggle("active");
+        toggle.classList.toggle("active");
+    })
+</script>
+</html>
